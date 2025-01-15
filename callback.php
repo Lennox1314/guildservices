@@ -34,6 +34,8 @@ curl_close($ch);
 
 $token_info = json_decode($response, true);
 
+echo $token_info;
+
 if (!isset($token_info['access_token'])) {
     die('Failed to obtain access token');
 }
