@@ -24,7 +24,10 @@ $data = [
     'grant_type' => 'authorization_code',
     'code' => $code,
     'redirect_uri' => $redirect_uri,
+    'scope' => 'identify'
 ];
+
+print_r($data);
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $token_url);
