@@ -9,6 +9,8 @@ if (!isset($_GET['code'])) {
    echo 'couldnt find code';
 }
 
+$code = $_GET['code'];
+
 $data = [
     'client_id' => $client_id,
     'client_secret' => $client_secret,
