@@ -35,7 +35,8 @@ $response = curl_exec($ch);
 curl_close($ch);
 
 $token_info = json_decode($response, true);
-
+echo $response;
+echo "Token info:\n";
 echo $token_info;
 
 if (!isset($token_info['access_token'])) {
