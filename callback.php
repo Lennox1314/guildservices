@@ -14,6 +14,15 @@ if (!isset($_GET['code'])) {
 
 $code = $_GET['code'];
 
+
+if (isset($_GET['code'])) {
+    $code = $_GET['code'];
+    // Echo the code to check its value
+    echo "Authorization Code: " . htmlspecialchars($code);
+} else {
+    echo "No authorization code received.";
+}
+
 // Exchange code for access token
 $token_url = 'https://discord.com/api/oauth2/token';
 $data = [
